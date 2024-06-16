@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Search</h1>
+        <form id="search-form" onsubmit="searchMovies(); return false;">
+            <input type="text" id="search-title" placeholder="Title" required>
+            <select id="search-type">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <div id="loading" class="loading">Loading...</div>
+        <div id="movie-list" class="movie-list"></div>
+        <button id="more-button" class="more-button" onclick="loadMoreMovies()">More</button>
+        <div id="movie-modal" class="modal">
+            <div class="modal-content" id="modal-content"></div>
+            <button class="close-button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
